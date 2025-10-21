@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Live Drawings • The Richard Craven Foundation</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <header>
+    <a href="/" class="logo">The Richard Craven Foundation</a>
+    <nav>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/story.html">Richard’s Story</a>
+      <a class="btn btn-primary" href="/tickets.html">Buy Raffle Tickets</a>
+      <a class="btn btn-secondary" href="/live.html">Live Drawings (Watch/Upload)</a>
+    </nav>
+  </header>
+
+  <main class="container" style="max-width:900px">
+    <h1>Live Drawings</h1>
+    <p>Watch recent drawings below. If you have a recording or link to share, use the form on this page.</p>
+
+    <section aria-labelledby="watch">
+      <h2 id="watch">Latest Drawing</h2>
+      <div id="fb-root"></div>
+      <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0"></script>
+      <!-- Replace data-href with your Facebook video/live replay URL -->
+      <div class="fb-video"
+           data-href="https://www.facebook.com/YourPageName/videos/1234567890123456/"
+           data-width="800"
+           data-allowfullscreen="true"
+           data-show-text="false">
+      </div>
+    </section>
+
+    <hr style="margin:32px 0;">
+
+    <section aria-labelledby="submit">
+      <h2 id="submit">Share Your Drawing Video</h2>
+      <p><strong>Best option:</strong> paste a link to your Facebook, YouTube, or Google Drive video. If you try a direct upload, keep it small.</p>
+
+      <!-- Netlify will capture this form if you enable Forms in your site. -->
+      <form name="submit-video" method="POST" data-netlify="true" enctype="multipart/form-data" action="/thanks.html">
+        <input type="hidden" name="form-name" value="submit-video">
+        <div class="field">
+          <label>Your Name
+            <input name="name" type="text" required>
+          </label>
+        </div>
+        <div class="field">
+          <label>Email (for follow-up)
+            <input name="email" type="email" required>
+          </label>
+        </div>
+        <div class="field">
+          <label>Video Link (Facebook/YouTube/Drive)
+            <input name="video_url" type="url" placeholder="https://..." >
+          </label>
+        </div>
+        <div class="field">
+          <label>Or Upload a Small Video File
+            <input name="video_file" type="file" accept="video/*">
+          </label>
+          <small>Large videos are better uploaded to Facebook first, then share the link above.</small>
+        </div>
+        <div class="field">
+          <label>Notes (optional)
+            <textarea name="notes" rows="4" placeholder="Anything we should know?"></textarea>
+          </label>
+        </div>
+        <button class="btn btn-primary" type="submit">Send Video</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© The Richard Craven Foundation</p>
+  </footer>
+</body>
+</html>
