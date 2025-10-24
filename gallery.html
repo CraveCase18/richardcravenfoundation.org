@@ -9,9 +9,8 @@
     .wrap{max-width:1100px;margin:0 auto;padding:24px}
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
     figure{background:#fff;border:1px solid #e2e8f0;border-radius:10px;overflow:hidden}
-    img{width:100%;height:220px;object-fit:cover;display:block;background:#f1f5f9}
+    img{width:100%;height:220px;object-fit:cover;display:block}
     figcaption{padding:10px 12px;font-size:14px;color:#334155}
-    .bad{outline:3px solid red}
   </style>
 </head>
 <body>
@@ -25,42 +24,46 @@
 
   <main class="wrap">
     <h1>Gallery</h1>
-    <div id="grid" class="grid" aria-live="polite"></div>
+    <div class="grid">
+      <figure>
+        <img src="/Images/Dadnoshirt.jpg" alt="Richard as a kid">
+        <figcaption>Richard as a kid</figcaption>
+      </figure>
+      <figure>
+        <img src="/Images/DadBrothers.jpg" alt="Richard with brothers">
+        <figcaption>Richard with brothers</figcaption>
+      </figure>
+      <figure>
+        <img src="/Images/DadFish.jpg" alt="Fishing day">
+        <figcaption>Fishing day</figcaption>
+      </figure>
+      <figure>
+        <img src="/Images/DadGmaGpa.jpg" alt="With Grandma & Grandpa">
+        <figcaption>With Grandma & Grandpa</figcaption>
+      </figure>
+      <figure>
+        <img src="/Images/DadGranddaughters.JPG" alt="With granddaughters">
+        <figcaption>With granddaughters</figcaption>
+      </figure>
+      <figure>
+        <img src="/Images/DadGrandpa.jpg" alt="Grandpa and grandchild">
+        <figcaption>Grandpa and grandchild</figcaption>
+      </figure>
+      <figure>
+        <img src="/Images/DadGrandsons.JPG" alt="With grandsons">
+        <figcaption>With grandsons</figcaption>
+      </figure>
+      <figure>
+        <img src="/Images/DadMom.JPG" alt="With Mom">
+        <figcaption>With Mom</figcaption>
+      </figure>
+      <figure>
+        <img src="/Images/DadMomYoung.jpg" alt="Young Richard & Mom">
+        <figcaption>Young Richard & Mom</figcaption>
+      </figure>
+    </div>
   </main>
 
   <footer><p>© The Richard Craven Foundation</p></footer>
-
-  <script>
-  // EXACT filenames you uploaded in /Images/ (case-sensitive)
-  const data = {
-    items: [
-      { src: 'Dadnoshirt.jpg', caption: 'Richard as a kid' },
-      { src: 'DadBrothers.jpg', caption: 'Richard with brothers' },
-      { src: 'DadFish.jpg', caption: 'Fishing day' },
-      { src: 'DadGmaGpa.jpg', caption: 'With Grandma & Grandpa' },
-      { src: 'DadGranddaughters.JPG', caption: 'With granddaughters' },
-      { src: 'DadGrandpa.jpg', caption: 'Grandpa and grandchild' },
-      { src: 'DadGrandsons.JPG', caption: 'With grandsons' },
-      { src: 'DadMom.JPG', caption: 'With Mom' },
-      { src: 'DadMomYoung.jpg', caption: 'Young Richard & Mom' }
-    ]
-  };
-
-  const grid = document.getElementById('grid');
-  const frag = document.createDocumentFragment();
-  data.items.forEach(item => {
-    const fig = document.createElement('figure');
-    const img = document.createElement('img');
-    img.src = '/Images/' + item.src + '?v=' + Date.now(); // root-absolute + cache-buster
-    img.alt = item.caption || 'Gallery image';
-    img.loading = 'lazy';
-    img.onerror = () => { img.classList.add('bad'); console.warn('Broken image:', img.src); };
-    const cap = document.createElement('figcaption');
-    cap.textContent = item.caption || '';
-    fig.appendChild(img); if(cap.textContent) fig.appendChild(cap);
-    frag.appendChild(fig);
-  });
-  grid.appendChild(frag);
-  </script>
 </body>
 </html>
