@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gallery • The Richard Craven Foundation</title>
-  <!-- Your css is in repo root -->
   <link rel="stylesheet" href="/styles.css" />
   <style>
     .wrap{max-width:1100px;margin:0 auto;padding:24px}
@@ -13,8 +12,6 @@
     img{width:100%;height:220px;object-fit:cover;display:block;background:#f1f5f9}
     figcaption{padding:10px 12px;font-size:14px;color:#334155}
     .bad{outline:3px solid red}
-    .note{background:#fff7ed;border:1px solid #fed7aa;color:#a16207;padding:10px 12px;border-radius:8px;margin:12px 0}
-    .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
   </style>
 </head>
 <body>
@@ -23,110 +20,46 @@
     <nav>
       <a href="/gallery" aria-current="page">Gallery</a>
       <a href="/story.html">Richard’s Story</a>
-      <a class="btn btn-primary" href="/tickets.html">Buy Raffle Tickets</a>
-      <a class="btn btn-secondary" href="/live.html">Live Drawings (Watch/Upload)</a>
     </nav>
   </header>
 
   <main class="wrap">
     <h1>Gallery</h1>
-    <div id="status" class="note" role="status" style="display:none"></div>
     <div id="grid" class="grid" aria-live="polite"></div>
   </main>
 
   <footer><p>© The Richard Craven Foundation</p></footer>
 
   <script>
-  // --- EXACT filenames you told me (case-sensitive) ---
-  const ITEMS = [
-    { src: 'Dadnoshirt.jpg', caption: 'Richard as a kid' },
-    { src: 'DadBrothers.jpg', caption: 'Richard with brothers' },
-    { src: 'DadFish.jpg', caption: 'Fishing day' },
-    { src: 'DadGmaGpa.jpg', caption: 'With Grandma & Grandpa' },
-    { src: 'DadGranddaughters.JPG', caption: 'With granddaughters' },
-    { src: 'DadGrandpa.jpg', caption: 'Grandpa and grandchild' },
-    { src: 'DadGrandsons.JPG', caption: 'With grandsons' },
-    { src: 'DadMom.JPG', caption: 'With Mom' },
-    { src: 'DadMomYoung.jpg', caption: 'Young Richard & Mom' }
-  ];
+  const data = {
+    items: [
+      { src: 'Dadnoshirt.jpg', caption: 'Richard as a kid' },
+      { src: 'DadBrothers.jpg', caption: 'Richard with brothers' },
+      { src: 'DadFish.jpg', caption: 'Fishing day' },
+      { src: 'DadGmaGpa.jpg', caption: 'With Grandma & Grandpa' },
+      { src: 'DadGranddaughters.JPG', caption: 'With granddaughters' },
+      { src: 'DadGrandpa.jpg', caption: 'Grandpa and grandchild' },
+      { src: 'DadGrandsons.JPG', caption: 'With grandsons' },
+      { src: 'DadMom.JPG', caption: 'With Mom' },
+      { src: 'DadMomYoung.jpg', caption: 'Young Richard & Mom' }
+    ]
+  };
 
-  // Try multiple likely folders + extension cases automatically
-  function candidatePaths(filename){
-    const parts = filename.split('.');
-    const base = parts.slice(0,-1).join('.') || filename; // handle names with dots
-    const ext  = parts.slice(-1)[0] || '';
-    const exts = [];
-    if (!ext) exts.push('jpg','JPG','jpeg','JPEG','png','PNG');
-    else {
-      exts.push(ext); // original
-      if (ext.toLowerCase() === 'jpg') exts.push('JPG','jpeg','JPEG');
-      if (ext.toLowerCase() === 'jpeg') exts.push('JPEG','jpg','JPG');
-      if (ext.toLowerCase() === 'png') exts.push('PNG','jpg','JPG');
-    }
-
-    const folders = [
-      '/Images/',        // your current repo folder (capital I)
-      '/images/',        // common alt
-      '/assets/img/',    // if moved later
-      '/assets/Images/', // alt
-      '/'                // root (just in case)
-    ];
-
-    const list = [];
-    for (const folder of folders){
-      for (const e of exts){
-        list.push(folder + (ext ? base + '.' + e : base + '.' + e));
-      }
-    }
-    return Array.from(new Set(list)); // unique
-  }
-
-  function loadWithFallback(imgEl, filename){
-    const candidates = candidatePaths(filename);
-    let i = 0;
-
-    function tryNext(){
-      if (i >= candidates.length){
-        imgEl.classList.add('bad');
-        console.warn('❌ Could not find image for', filename, 'Tried:', candidates);
-        return;
-      }
-      const url = candidates[i++];
-      // Use a throwaway Image() to probe before swapping src (prevents endless error loop)
-      const probe = new Image();
-      probe.onload = () => { imgEl.src = url; };
-      probe.onerror = tryNext;
-      probe.src = url + (url.includes('?') ? '&' : '?') + 'v=' + Date.now(); // bust cache
-    }
-
-    tryNext();
-  }
-
-  (function render(){
-    const grid = document.getElementById('grid');
-    const status = document.getElementById('status');
-    const frag = document.createDocumentFragment();
-
-    if (!ITEMS.length){
-      status.style.display='block';
-      status.textContent = 'No images listed.';
-      return;
-    }
-
-    ITEMS.forEach(item => {
-      const fig = document.createElement('figure');
-      const img = document.createElement('img');
-      img.alt = item.caption || 'Gallery image';
-      const cap = document.createElement('figcaption');
-      cap.textContent = item.caption || '';
-      fig.appendChild(img);
-      if (cap.textContent) fig.appendChild(cap);
-      frag.appendChild(fig);
-      // Try all folders/variants until one loads:
-      loadWithFallback(img, item.src);
-    });
-
-    grid.appendChild(frag);
-  })();
+  const grid = document.getElementById('grid');
+  const frag = document.createDocumentFragment();
+  data.items.forEach(item => {
+    const fig = document.createElement('figure');
+    const img = document.createElement('img');
+    img.src = '/Images/' + item.src + '?v=' + Date.now(); // root-absolute + cache-buster
+    img.alt = item.caption || 'Gallery image';
+    img.loading = 'lazy';
+    img.onerror = () => { img.classList.add('bad'); console.warn('Broken image:', img.src); };
+    const cap = document.createElement('figcaption');
+    cap.textContent = item.caption || '';
+    fig.appendChild(img); if(cap.textContent) fig.appendChild(cap);
+    frag.appendChild(fig);
+  });
+  grid.appendChild(frag);
   </script>
-<
+</body>
+</html>
