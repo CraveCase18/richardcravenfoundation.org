@@ -1,144 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Richard Craven Foundation</title>
-  <meta name="description" content="501(c)(3) nonprofit supporting families in need—honoring Richard Craven’s legacy of generosity." />
-  <link rel="icon" href="/assets/images/rcf-logo.png" />
-  <link rel="stylesheet" href="/assets/css/site.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{brand:{600:'#4f46e5',700:'#4338ca'}}}}}</script>
+  <title>The Richard Craven Foundation</title>
+  <link rel="stylesheet" href="/css/site.css" />
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased">
-  <div class="bg-slate-900 text-white text-sm">
-    <div class="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row gap-2 items-center justify-between">
-      <p class="opacity-90">A 501(c)(3) nonprofit supporting families in need • EIN: 87-3935599</p>
-      <div class="flex items-center gap-4">
-        <a class="hover:underline" href="/events.html">Events & Community</a>
-        <a class="hover:underline" href="/gallery.html">Gallery</a>
-        <a class="hover:underline" href="/story.html">Richard’s Story</a>
-      </div>
-    </div>
-  </div>
-  
-  <header class="bg-white shadow-sm sticky top-0 z-40">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/index.html" class="flex items-center gap-3">
-        <img src="/assets/images/rcf-logo.png" alt="Richard Craven Foundation logo" class="h-10 w-auto" />
-        <div>
-          <p class="font-bold text-slate-900 leading-tight">Richard Craven Foundation</p>
-          <p class="text-xs text-slate-500 leading-tight">Richard was kind. Richard was a giver. Be a Richard.</p>
-        </div>
-      </a>
-      <nav class="hidden md:block">
-        <ul class="flex items-center gap-6 text-sm font-medium">
-          <li><a href="/events.html" class="hover:text-brand-700 ">Events & Community</a></li>
-          <li><a href="/gallery.html" class="hover:text-brand-700 ">Gallery</a></li>
-          <li><a href="/story.html" class="hover:text-brand-700 ">Richard’s Story</a></li>
-          <li><a href="/index.html#donate" class="hover:text-brand-700">Donate</a></li>
-        </ul>
-      </nav>
-      <a href="/index.html#donate" class="inline-flex items-center gap-2 rounded-xl bg-yellow-500 text-white px-4 py-2 text-sm font-bold shadow-lg hover:bg-yellow-600">Donate</a>
-    </div>
+<body>
+  <header>
+    <a href="/" class="logo"><img id="logo" src="/Images/logo.png" alt="The Richard Craven Foundation" style="height:60px;object-fit:contain"></a>
+    <nav>
+      <a href="/gallery">Gallery</a>
+      <a href="/story.html">Richard’s Story</a>
+      <a href="/tickets.html">Raffle Tickets</a>
+      <a href="/live.html">Live Drawing</a>
+    </nav>
   </header>
 
-  <section id="home" class="relative overflow-hidden">
-    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-brand-600 via-brand-700 to-slate-900"></div>
-    <div class="max-w-7xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10 items-center text-white">
-      <div>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Honoring Richard Craven by helping families who need it most.</h1>
-        <p class="mt-4 text-white/90 text-lg">We provide groceries, clothing, essential household items, and emergency support—powered by community donations and volunteers.</p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#donate" class="inline-flex items-center rounded-xl bg-yellow-500 text-white px-5 py-3 font-bold shadow-lg hover:bg-yellow-600">Make a Donation</a>
-          <a href="/events.html" class="inline-flex items-center rounded-xl ring-1 ring-white/70 px-5 py-3 font-semibold hover:bg-white/10">Events & Community</a>
+  <main>
+    <section style="max-width:1100px;margin:0 auto;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:center">
+      <img src="/Images/RCMemorial.jpg" alt="Richard Craven Memorial" style="width:100%;max-height:300px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
+      <div style="font-size:1.1rem;line-height:1.6;color:#1e293b">
+        The Richard Craven Foundation continues Richard’s legacy of generosity and support for families in need. 
+        Your donations and raffle participation help us provide food, essentials, and real assistance in our community.
+        <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
+          <a href="/tickets.html" style="display:inline-block;padding:12px 18px;border-radius:8px;background:#0d6efd;color:#fff;text-decoration:none;font-weight:600">Buy Raffle Tickets</a>
+          <a href="/live.html" style="display:inline-block;padding:12px 18px;border-radius:8px;background:#f1f5f9;color:#0f172a;text-decoration:none;font-weight:600;border:1px solid #cbd5e1">Live Drawing</a>
         </div>
-        <p class="mt-6 text-sm text-white/80">501(c)(3) • EIN: 87-3935599</p>
       </div>
-      <img src="/assets/images/rc-memorial-fals.jpeg" alt="Richard Craven Memorial at Fairbury Speedway" class="rounded-2xl shadow-2xl w-full object-cover aspect-[4/3]" />
-    </div>
-  </section>
-  <section id="mission" class="py-16 md:py-24">
-    <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-slate-900">Our Mission</h2>
-      <p class="mt-4 text-lg text-slate-700">The Richard Craven Foundation supports families in need with dignity and care—providing food, clothing, essential household items, and timely assistance with bills. We honor Richard’s lifelong commitment to helping others through practical, local impact.</p>
-    </div>
-  </section>
-  <section id="donate" class="py-16 md:py-24 bg-gradient-to-b from-white to-slate-100">
-    <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-8 items-center">
-      <div>
-        <div class="text-left max-w-xl">
-          <h2 class="text-3xl font-bold text-slate-900">Donate</h2>
-          <p class="mt-3 text-slate-600">Every dollar helps a local family. Choose a method below or contact us for in-kind donations.</p>
-        </div>
-        <div class="mt-8 grid sm:grid-cols-3 gap-4">
-          <a href="https://www.paypal.com/donate?business=richardcravenfoundation@gmail.com" class="block rounded-2xl bg-yellow-500 text-white p-6 text-center font-bold shadow-lg hover:bg-yellow-600">PayPal</a>
-          <a href="https://venmo.com/u/RichardCravenFoundation" class="block rounded-2xl bg-yellow-500 text-white p-6 text-center font-bold shadow-lg hover:bg-yellow-600">Venmo</a>
-          <a href="mailto:hello@richardcravenfoundation.org?subject=ACH%20Donation%20Instructions" class="block rounded-2xl bg-yellow-500 text-white p-6 text-center font-bold shadow-lg hover:bg-yellow-600">Check / ACH</a>
-        </div>
-        <p class="mt-4 text-sm text-slate-600">
-          Mail checks to: <strong>The Richard Craven Foundation</strong>, 1233 E Washington St, Joliet, IL 60433. Include your email in the memo to receive a receipt.
-        </p>
-      </div>
-      <img src="/assets/images/donate-photo.png" alt="Donations for families" class="rounded-2xl shadow-xl w-full object-cover aspect-[4/3]" />
-    </div>
-  </section>
-  <section id="gallery" class="py-16 bg-slate-50">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex items-end justify-between flex-wrap gap-4">
-        <h2 class="text-3xl font-bold text-slate-900">Gallery</h2>
-        <a href="/gallery.html" class="text-sm font-semibold text-brand-700 hover:underline">See all photos →</a>
-      </div>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
-        <figure class="rounded-xl overflow-hidden shadow-sm ring-1 ring-slate-900/5 bg-white">
-          <a href="/assets/images/dad-fish.jpg" class="gallery-item" data-full="/assets/images/dad-fish.jpg">
-            <img src="/assets/images/dad-fish.jpg" alt="Richard loved the outdoors" class="w-full h-56 object-cover" loading="lazy" />
-          </a>
-          <figcaption class="p-3 text-sm text-slate-700">Richard loved the outdoors.</figcaption>
-        </figure>
-        <figure class="rounded-xl overflow-hidden shadow-sm ring-1 ring-slate-900/5 bg-white">
-          <a href="/assets/images/rc-memorial-ashes.jpeg" class="gallery-item" data-full="/assets/images/rc-memorial-ashes.jpeg">
-            <img src="/assets/images/rc-memorial-ashes.jpeg" alt="Memorial ashes ceremony" class="w-full h-56 object-cover" loading="lazy" />
-          </a>
-          <figcaption class="p-3 text-sm text-slate-700">A moving tribute.</figcaption>
-        </figure>
-        <figure class="rounded-xl overflow-hidden shadow-sm ring-1 ring-slate-900/5 bg-white">
-          <a href="/assets/images/family-3.jpg" class="gallery-item" data-full="/assets/images/family-3.jpg">
-            <img src="/assets/images/family-3.jpg" alt="Family group smiling together" class="w-full h-56 object-cover" loading="lazy" />
-          </a>
-          <figcaption class="p-3 text-sm text-slate-700">Family was everything.</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-  
-  <footer class="bg-slate-900 text-slate-300">
-    <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
-      <div>
-        <p class="font-bold text-white">Richard Craven Foundation</p>
-        <p class="text-sm mt-2">© <span id="year"></span> Richard Craven Foundation. All rights reserved.</p>
-        <p class="text-xs mt-2">501(c)(3) • EIN: 87-3935599</p>
-      </div>
-      <div>
-        <p class="font-semibold text-white">Quick Links</p>
-        <ul class="mt-3 space-y-2 text-sm">
-          <li><a class="hover:underline" href="/story.html">Richard’s Story</a></li>
-          <li><a class="hover:underline" href="/gallery.html">Gallery</a></li>
-          <li><a class="hover:underline" href="/events.html">Events & Community</a></li>
-          <li><a class="hover:underline" href="/index.html#donate">Donate</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="font-semibold text-white">Contact</p>
-        <ul class="mt-3 space-y-2 text-sm">
-          <li>Email: <a class="hover:underline" href="mailto:hello@richardcravenfoundation.org">hello@richardcravenfoundation.org</a></li>
-          <li>Mail: 1233 E Washington St, Joliet, IL 60433</li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    </section>
 
-  <script src="/assets/js/lightbox.js" defer></script>
+    <section style="max-width:1100px;margin:0 auto;padding:24px">
+      <h2 style="margin:0 0 12px 0;font-size:1.25rem;color:#0f172a">Recent Photos</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px">
+        <img src="/Images/Dadnoshirt.jpg" alt="Richard as a kid" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
+        <img src="/Images/DadBrothers.jpg" alt="Richard with brothers" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
+        <img src="/Images/DadFish.jpg" alt="Fishing day" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
+        <img src="/Images/DadGmaGpa.jpg" alt="With Grandma & Grandpa" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
+        <img src="/Images/DadGranddaughters.JPG" alt="With granddaughters" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
+        <img src="/Images/DadGrandpa.jpg" alt="Grandpa and grandchild" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
+        <img src="/Images/DadGrandsons.JPG" alt="With grandsons" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
+        <img src="/Images/DadMom.JPG" alt="With Mom" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
+        <img src="/Images/DadMomYoung.jpg" alt="Young Richard & Mom" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
+      </div>
+    </section>
+  </main>
+
+  <footer><p>© The Richard Craven Foundation</p></footer>
+
+  <script>
+  (function(){function n(e){var t=e.getAttribute("src")||"";if(!t)return;if(e.id==="logo"||e.closest("header"))return;if(t.startsWith("/Images/"))return;var r=t.split("/").pop(),a=/\.[a-zA-Z0-9]+$/.test(r),o=a?r.replace(/\.[^.]+$/,""):r,i=a?r.split(".").pop():"",s=i?[i,i.toLowerCase(),i.toUpperCase(),i==="jpg"?"jpeg":i==="jpeg"?"jpg":"png","JPG","JPEG","PNG"]:["jpg","JPG","jpeg","JPEG","png","PNG"],c=s.map(function(l){return"/Images/"+o+"."+l});function d(l){if(l>=c.length)return;var u=c[l],m=new Image;m.onload=function(){e.src=u},m.onerror=function(){d(l+1)},m.src=u+(u.includes("?")?"&":"?")+"v="+Date.now()}if(a){var f="/Images/"+r,g=new Image;g.onload=function(){e.src=f},g.onerror=function(){d(0)},g.src=f+(f.includes("?")?"&":"?")+"v="+Date.now()}else d(0)}function p(e){var t=document.createElement("div");t.id="lb",t.style.cssText="position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.85);z-index:9999;";var r=document.createElement("img");r.style.cssText="max-width:90vw;max-height:90vh;box-shadow:0 10px 40px rgba(0,0,0,.6);border-radius:10px",t.appendChild(r),t.addEventListener("click",function(){t.style.display="none"}),document.body.appendChild(t);var a=e.querySelectorAll("img");a.forEach(function(o){if(o.id==="logo"||o.closest("header"))return;o.style.cursor="zoom-in",o.addEventListener("click",function(){r.src=o.currentSrc||o.src,t.style.display="flex"})})}window.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("img").forEach(n),p(document)})})();
+  </script>
 </body>
 </html>
