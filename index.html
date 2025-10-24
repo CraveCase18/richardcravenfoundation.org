@@ -19,9 +19,9 @@
 
   <main>
     <section style="max-width:1100px;margin:0 auto;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:center">
-      <img src="/Images/RCMemorial.jpg" alt="Richard Craven Memorial" style="width:100%;max-height:320px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
+      <img src="/Images/RCMemorial.jpg" alt="Richard Craven Memorial" style="width:100%;max-height:300px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
       <div style="font-size:1.1rem;line-height:1.6;color:#1e293b">
-        The Richard Craven Foundation continues Richard’s legacy of generosity and support for families in need.
+        The Richard Craven Foundation continues Richard’s legacy of generosity and support for families in need. 
         Your donations and raffle participation help us provide food, essentials, and real assistance in our community.
         <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
           <a href="/tickets.html" style="display:inline-block;padding:12px 18px;border-radius:8px;background:#0d6efd;color:#fff;text-decoration:none;font-weight:600">Buy Raffle Tickets</a>
@@ -49,60 +49,7 @@
   <footer><p>© The Richard Craven Foundation</p></footer>
 
   <script>
-  (function(){
-    function normalize(img){
-      var src = img.getAttribute("src")||"";
-      if(!src) return;
-      if(img.id==="logo"||img.closest("header")) return;
-      if(src.startsWith("/Images/")) return;
-      var file = src.split("/").pop();
-      var hasExt = /\.[a-zA-Z0-9]+$/.test(file);
-      var base = hasExt ? file.replace(/\.[^.]+$/, "") : file;
-      var ext  = hasExt ? file.split(".").pop() : "";
-      var extList = ext ? [ext, ext.toLowerCase(), ext.toUpperCase(), (ext==="jpg"?"jpeg":ext==="jpeg"?"jpg":"png"), "JPG","JPEG","PNG"] : ["jpg","JPG","jpeg","JPEG","png","PNG"];
-      var candidates = extList.map(function(e){ return "/Images/"+base+"."+e; });
-
-      function tryAt(i){
-        if(i>=candidates.length) return;
-        var url = candidates[i];
-        var probe = new Image();
-        probe.onload = function(){ img.src = url; };
-        probe.onerror = function(){ tryAt(i+1); };
-        probe.src = url + (url.includes("?")?"&":"?")+"v="+Date.now();
-      }
-      if(hasExt){
-        var first = "/Images/"+file, p=new Image();
-        p.onload=function(){ img.src=first; };
-        p.onerror=function(){ tryAt(0); };
-        p.src = first + (first.includes("?")?"&":"?")+"v="+Date.now();
-      } else {
-        tryAt(0);
-      }
-    }
-
-    function lightbox(root){
-      var lb = document.createElement("div");
-      lb.style.cssText="position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.85);z-index:9999;";
-      var big = document.createElement("img");
-      big.style.cssText="max-width:90vw;max-height:90vh;box-shadow:0 10px 40px rgba(0,0,0,.6);border-radius:10px";
-      lb.appendChild(big);
-      lb.addEventListener("click", function(){ lb.style.display="none"; });
-      document.body.appendChild(lb);
-      root.querySelectorAll("img").forEach(function(img){
-        if(img.id==="logo"||img.closest("header")) return;
-        img.style.cursor="zoom-in";
-        img.addEventListener("click", function(){
-          big.src = img.currentSrc || img.src;
-          lb.style.display="flex";
-        });
-      });
-    }
-
-    window.addEventListener("DOMContentLoaded", function(){
-      document.querySelectorAll("img").forEach(normalize);
-      lightbox(document);
-    });
-  })();
+  (function(){function n(e){var t=e.getAttribute("src")||"";if(!t)return;if(e.id==="logo"||e.closest("header"))return;if(t.startsWith("/Images/"))return;var r=t.split("/").pop(),a=/\.[a-zA-Z0-9]+$/.test(r),o=a?r.replace(/\.[^.]+$/,""):r,i=a?r.split(".").pop():"",s=i?[i,i.toLowerCase(),i.toUpperCase(),i==="jpg"?"jpeg":i==="jpeg"?"jpg":"png","JPG","JPEG","PNG"]:["jpg","JPG","jpeg","JPEG","png","PNG"],c=s.map(function(l){return"/Images/"+o+"."+l});function d(l){if(l>=c.length)return;var u=c[l],m=new Image;m.onload=function(){e.src=u},m.onerror=function(){d(l+1)},m.src=u+(u.includes("?")?"&":"?")+"v="+Date.now()}if(a){var f="/Images/"+r,g=new Image;g.onload=function(){e.src=f},g.onerror=function(){d(0)},g.src=f+(f.includes("?")?"&":"?")+"v="+Date.now()}else d(0)}function p(e){var t=document.createElement("div");t.id="lb",t.style.cssText="position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.85);z-index:9999;";var r=document.createElement("img");r.style.cssText="max-width:90vw;max-height:90vh;box-shadow:0 10px 40px rgba(0,0,0,.6);border-radius:10px",t.appendChild(r),t.addEventListener("click",function(){t.style.display="none"}),document.body.appendChild(t);var a=e.querySelectorAll("img");a.forEach(function(o){if(o.id==="logo"||o.closest("header"))return;o.style.cursor="zoom-in",o.addEventListener("click",function(){r.src=o.currentSrc||o.src,t.style.display="flex"})})}window.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("img").forEach(n),p(document)})})();
   </script>
 </body>
 </html>
