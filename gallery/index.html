@@ -3,44 +3,79 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Richard Craven Foundation</title>
+  <title>Gallery • The Richard Craven Foundation</title>
   <link rel="stylesheet" href="/css/site.css" />
 </head>
 <body>
   <header>
-    <a href="/" class="logo">The Richard Craven Foundation</a>
-    <nav>
-      <a href="/gallery">Gallery</a>
-      <a href="/story.html">Richard’s Story</a>
-    </nav>
+    <div class="topbar">
+      <div class="brand">
+        <a href="/" class="logo" style="display:inline-flex;align-items:center;gap:10px">
+          <img id="logo" src="/Images/Rcf-logo.png" alt="The Richard Craven Foundation" style="height:60px;object-fit:contain;display:block" />
+          <span class="badge">501(c)(3) • EIN 87-3935599</span>
+        </a>
+      </div>
+      <nav>
+        <a href="/support.html">Ways to Support</a>
+        <a href="/community.html">Community &amp; Events</a>
+        <a href="/story.html">Richard’s Story</a>
+        <a href="/gallery" aria-current="page">Gallery</a>
+        <a class="btn btn-primary" href="https://www.paypal.com/donate/?hosted_button_id=29SB5STNX33WC">Donate</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section style="max-width:1100px;margin:0 auto;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:center">
-      <img src="logo" alt="RCF Logo" style="width:100%;max-height:240px;object-fit:contain;display:block;border:1px solid #e2e8f0;border-radius:10px" />
-      <img src="RCMemorial" alt="Richard Craven Memorial" style="width:100%;max-height:240px;object-fit:cover;display:block;border:1px solid #e2e8f0;border-radius:10px" />
-    </section>
+  <main class="wrap">
+    <h1>Gallery</h1>
+    <p><a class="btn btn-primary" href="https://www.paypal.com/donate/?hosted_button_id=29SB5STNX33WC">Donate</a></p>
 
-    <section style="max-width:1100px;margin:0 auto;padding:24px">
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px">
-        <img src="/Images/Dadnoshirt.jpg" alt="Young Richard" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
-        <img src="/Images/GrandmaDad.JPG" alt="Young Richard" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
-        <img src="/Images/DadBrothers.jpg" alt="Brothers & Best Friends" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
-        <img src="/Images/DadFish.jpg" alt="Fishing Day" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
-        <img src="/Images/DadGmaGpa.jpg" alt="The oldest of 6" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
-        <img src="/Images/DadGrandpa.jpg" alt="Fun in the Sun" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
-        <img src="/Images/DadGranddaughters.JPG" alt="With granddaughters" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
-        <img src="/Images/DadGrandsons.JPG" alt="With grandsons" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
-        <img src="/Images/DadMom.JPG" alt="In Sickness and in Health" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
-        <img src="/Images/DadMomYoung.jpg" alt="Young Couple Trying to Survive" style="width:100%;height:180px;object-fit:cover;display:block;border-radius:10px;border:1px solid #e2e8f0">
-      </div>
-    </section>
+    <div class="grid" id="grid">
+      <!-- Thumbnails (click to enlarge) -->
+      <figure><a href="/Images/DadSmile.jpg" target="_blank"><img src="/Images/DadSmile.jpg" alt="Dad Smile"></a><figcaption>Dad Smile</figcaption></figure>
+      <figure><a href="/Images/DadMom2.jpg" target="_blank"><img src="/Images/DadMom2.jpg" alt="Dad & Mom"></a><figcaption>Dad & Mom</figcaption></figure>
+      <figure><a href="/Images/DadGmaGpa.jpg" target="_blank"><img src="/Images/DadGmaGpa.jpg" alt="Grandma & Grandpa"></a><figcaption>Grandma & Grandpa</figcaption></figure>
+      <figure><a href="/Images/DadBrothers.jpg" target="_blank"><img src="/Images/DadBrothers.jpg" alt="Brothers"></a><figcaption>Brothers</figcaption></figure>
+      <figure><a href="/Images/3Wide.jpg" target="_blank"><img src="/Images/3Wide.jpg" alt="3 Wide"></a><figcaption>3 Wide</figcaption></figure>
+      <figure><a href="/Images/DadUncleHank.jpg" target="_blank"><img src="/Images/DadUncleHank.jpg" alt="Uncle Hank"></a><figcaption>Uncle Hank</figcaption></figure>
+      <figure><a href="/Images/Family2.jpg" target="_blank"><img src="/Images/Family2.jpg" alt="Family 2"></a><figcaption>Family 2</figcaption></figure>
+      <figure><a href="/Images/Medieval.jpg" target="_blank"><img src="/Images/Medieval.jpg" alt="Medieval"></a><figcaption>Medieval</figcaption></figure>
+      <figure><a href="/Images/Richarddoingbattle.jpg" target="_blank"><img src="/Images/Richarddoingbattle.jpg" alt="Richard doing battle"></a><figcaption>Richard doing battle</figcaption></figure>
+      <figure><a href="/Images/Planking.jpg" target="_blank"><img src="/Images/Planking.jpg" alt="Planking"></a><figcaption>Planking</figcaption></figure>
+      <figure><a href="/Images/Thanks.jpg" target="_blank"><img src="/Images/Thanks.jpg" alt="Thanks"></a><figcaption>Thanks</figcaption></figure>
+      <figure><a href="/Images/20th.jpg" target="_blank"><img src="/Images/20th.jpg" alt="20th"></a><figcaption>20th</figcaption></figure>
+      <figure><a href="/Images/DadKash.jpg" target="_blank"><img src="/Images/DadKash.jpg" alt="Dad & Kash"></a><figcaption>Dad & Kash</figcaption></figure>
+      <figure><a href="/Images/Bren.jpg" target="_blank"><img src="/Images/Bren.jpg" alt="Bren"></a><figcaption>Bren</figcaption></figure>
+      <figure><a href="/Images/DadGrandpa.jpg" target="_blank"><img src="/Images/DadGrandpa.jpg" alt="Grandpa"></a><figcaption>Grandpa</figcaption></figure>
+      <figure><a href="/Images/Winning.jpg" target="_blank"><img src="/Images/Winning.jpg" alt="Winning"></a><figcaption>Winning</figcaption></figure>
+      <figure><a href="/Images/Char.jpg" target="_blank"><img src="/Images/Char.jpg" alt="Char"></a><figcaption>Char</figcaption></figure>
+      <figure><a href="/Images/DadAC.jpg" target="_blank"><img src="/Images/DadAC.jpg" alt="Dad AC"></a><figcaption>Dad AC</figcaption></figure>
+      <figure><a href="/Images/Kickball.jpg" target="_blank"><img src="/Images/Kickball.jpg" alt="Kickball"></a><figcaption>Kickball</figcaption></figure>
+      <figure><a href="/Images/DadandMe.jpg" target="_blank"><img src="/Images/DadandMe.jpg" alt="Dad and Me"></a><figcaption>Dad and Me</figcaption></figure>
+      <figure><a href="/Images/DadFish.jpg" target="_blank"><img src="/Images/DadFish.jpg" alt="Fishing"></a><figcaption>Fishing</figcaption></figure>
+      <figure><a href="/Images/RacingFace.jpg" target="_blank"><img src="/Images/RacingFace.jpg" alt="Racing Face"></a><figcaption>Racing Face</figcaption></figure>
+    </div>
+
+    <h2 style="margin-top:24px">Email Signup</h2>
+    <iframe data-w-type="embedded" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+      src="https://srhmo.mjt.lu/wgt/srhmo/0wn9/form?c=4f818c1f" width="100%" style="height: 0;"></iframe>
+    <script type="text/javascript" src="https://app.mailjet.com/pas-nc-embedded-v1.js"></script>
   </main>
 
-  <footer><p>© The Richard Craven Foundation</p></footer>
-
-  <script>
-  (function(){function n(e){var t=e.getAttribute("src")||"";if(!t)return;if(t.startsWith("/Images/"))return;var r=t.split("/").pop(),a=/\.[a-zA-Z0-9]+$/.test(r),o=a?r.replace(/\.[^.]+$/,""):r,i=a?r.split(".").pop():"",s=i?[i,i.toLowerCase(),i.toUpperCase(),i==="jpg"?"jpeg":i==="jpeg"?"jpg":"png","JPG","JPEG","PNG"]:["jpg","JPG","jpeg","JPEG","png","PNG"],c=s.map(function(l){return"/Images/"+o+"."+l});function d(l){if(l>=c.length)return;var u=c[l],m=new Image;m.onload=function(){e.src=u},m.onerror=function(){d(l+1)},m.src=u+(u.includes("?")?"&":"?")+"v="+Date.now()}if(a){var f="/Images/"+r,g=new Image;g.onload=function(){e.src=f},g.onerror=function(){d(0)},g.src=f+(f.includes("?")?"&":"?")+"v="+Date.now()}else d(0)}function p(e){var t=document.createElement("div");t.id="lb",t.style.cssText="position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.85);z-index:9999;";var r=document.createElement("img");r.style.cssText="max-width:90vw;max-height:90vh;box-shadow:0 10px 40px rgba(0,0,0,.6);border-radius:10px",t.appendChild(r),t.addEventListener("click",function(){t.style.display="none"}),document.body.appendChild(t);var a=e.querySelectorAll("img");a.forEach(function(o){o.style.cursor="zoom-in",o.addEventListener("click",function(){r.src=o.currentSrc||o.src,t.style.display="flex"})})}window.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("img").forEach(n),p(document)})})();
-  </script>
+  <footer>
+    <div class="container" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px">
+      <div>
+        <div>© The Richard Craven Foundation</div>
+        <div>1233 E Washington St, Joliet, IL 60433 • 815-412-0255</div>
+        <div>501(c)(3) • EIN 87-3935599</div>
+      </div>
+      <nav>
+        <a href="/support.html">Ways to Support</a> •
+        <a href="/community.html">Community &amp; Events</a> •
+        <a href="/story.html">Richard’s Story</a> •
+        <a href="/gallery">Gallery</a> •
+        <a href="https://www.facebook.com/TheRichardCravenFoundation">Facebook</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
