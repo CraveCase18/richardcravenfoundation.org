@@ -4,32 +4,55 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Buy Raffle Tickets • The Richard Craven Foundation</title>
-  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="/css/site.css" />
+  <style>
+    .raffle-wrap{max-width:900px;margin:0 auto;padding:24px;text-align:center}
+    .raffle{border:1px solid #e2e8f0;border-radius:12px;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.08);padding:28px 20px;margin-bottom:24px}
+    .raffle h2{margin-bottom:8px}
+    .raffle p{margin-bottom:18px}
+    .btn-xl.btn{font-size:1.1rem;padding:16px 28px;border-radius:12px}
+  </style>
 </head>
 <body>
   <header>
-    <a href="/" class="logo">The Richard Craven Foundation</a>
-    <nav>
-      <a href="/gallery.html">Gallery</a>
-      <a href="/story.html">Richard’s Story</a>
-      <a class="btn btn-primary" href="/tickets.html">Buy Raffle Tickets</a>
-      <a class="btn btn-secondary" href="/live.html">Live Drawings (Watch/Upload)</a>
-    </nav>
+    <div class="topbar">
+      <div class="brand">
+        <a href="/" class="logo" style="display:inline-flex;align-items:center;gap:10px">
+          <img id="logo" src="/Images/Rcf-logo.png" alt="The Richard Craven Foundation" style="height:60px;object-fit:contain;display:block" />
+          <span class="badge">501(c)(3) • EIN 87-3935599</span>
+        </a>
+      </div>
+      <nav>
+        <a href="/support.html">Ways to Support</a>
+        <a href="/community.html">Community &amp; Events</a>
+        <a href="/story.html">Richard’s Story</a>
+        <a href="/gallery">Gallery</a>
+        <a class="btn btn-primary" href="https://www.paypal.com/donate/?hosted_button_id=29SB5STNX33WC">Donate</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="container">
+  <main class="raffle-wrap">
     <h1>Buy Raffle Tickets</h1>
-    <p>Every ticket helps us fund Thanksgiving and Christmas support for local families. Thank you!</p>
+    <p>All proceeds benefit <strong>Richard’s Christmas of Hope</strong> to support local children and families.</p>
 
-    <!-- Replace with your real checkout URL (Givebutter, Zeffy, RallyUp, Stripe, PayPal, etc.) -->
-    <p><a class="btn btn-primary" href="https://your-checkout-link.example" target="_blank" rel="noopener">Purchase on our secure checkout</a></p>
+    <section class="raffle">
+      <h2>🎁 50&quot; TV Raffle</h2>
+      <p>Enter to win a 50&quot; TV and help make the holidays brighter.</p>
+      <p><a href="https://www.paypal.com/ncp/payment/YLEQAAG9G6HNJ" class="btn btn-primary btn-xl" target="_blank" rel="noopener">Buy Tickets</a></p>
+    </section>
 
-    <!-- Optional embed from your platform goes here -->
-    <!-- <iframe src="YOUR_EMBED_URL" style="width:100%;max-width:720px;height:900px;border:0;" loading="lazy" allow="payment *"></iframe> -->
+    <section class="raffle">
+      <h2>🎄 Gift Cards &amp; Scratch-Off Tree Raffle</h2>
+      <p>Score a stack of gift cards and lottery scratch-offs while supporting families in need.</p>
+      <p><a href="https://www.paypal.com/ncp/payment/TDREZCR3ZNDT2" class="btn btn-primary btn-xl" target="_blank" rel="noopener">Buy Tickets</a></p>
+    </section>
   </main>
 
   <footer>
-    <p>© The Richard Craven Foundation</p>
+    <div class="container" style="text-align:center;padding:20px 0">
+      <p>© The Richard Craven Foundation • 501(c)(3) Nonprofit Organization</p>
+    </div>
   </footer>
 </body>
 </html>
