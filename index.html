@@ -62,20 +62,53 @@
     </section>
 
     <section class="container" aria-labelledby="gallery-heading">
-      <h2 id="gallery-heading">Gallery Preview</h2>
-      <div class="thumbs">
-        <a href="/gallery"><img src="/Images/DadSmile.jpg" 
-        <a href="/gallery"><img src="/Images/DadMom2.jpg"
-        <a href="/gallery"><img src="/Images/DadGmaGpa.jpg" 
-                             
-        <a href="/gallery"><img src="/Images/DadBrothers.jpg" 
-        <a href="/gallery"><img src="/Images/DadFish.jpg" 
-        <a href="/gallery"><img src="/Images/RacingFace.jpg" 
-      </div>
-      <div style="margin-top:12px">
-        <a class="btn btn-secondary" href="/gallery">View Full Gallery</a>
-      </div>
-    </section>
+  <h2 id="gallery-heading">Gallery Preview</h2>
+
+  <style>
+    .home-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .home-gallery img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .home-gallery img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+    .view-gallery {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+
+  <div class="home-gallery">
+    <a href="/gallery"><img src="/Images/DadSmile.jpg" alt="Dad Smile"></a>
+    <a href="/gallery"><img src="/Images/DadMom2.jpg" alt="Dad & Mom"></a>
+    <a href="/gallery"><img src="/Images/DadGmaGpa.jpg" alt="Dad Grandma Grandpa"></a>
+
+    <a href="/gallery"><img src="/Images/DadBrothers.jpg" alt="Dad & Brothers"></a>
+    <a href="/gallery"><img src="/Images/DadFish.jpg" alt="Dad Fishing"></a>
+    <a href="/gallery"><img src="/Images/RacingFace.jpg" alt="Racing Face"></a>
+
+    <a href="/gallery"><img src="/Images/Family2.jpg" alt="Family"></a>
+    <a href="/gallery"><img src="/Images/3Wide.jpg" alt="3 Wide"></a>
+    <a href="/gallery"><img src="/Images/DadAC.jpg" alt="Dad & AC"></a>
+  </div>
+
+  <div class="view-gallery">
+    <a class="btn btn-secondary" href="/gallery">View Full Gallery</a>
+  </div>
+</section>
+
 
     <section class="container" aria-labelledby="signup-heading">
   <h2 id="signup-heading">Email Signup</h2>
