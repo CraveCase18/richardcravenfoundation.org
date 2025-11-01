@@ -5,13 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gallery • The Richard Craven Foundation</title>
   <link rel="stylesheet" href="/css/site.css" />
+  <style>
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:14px;
+    }
+    .gallery-grid a{display:block}
+    .gallery-grid img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+      border-radius:12px;
+      border:1px solid #e3e6ef;
+      box-shadow:0 6px 24px rgba(0,0,0,.08),0 2px 8px rgba(0,0,0,.06);
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+    .gallery-grid a:hover img{transform:translateY(-2px) scale(1.01)}
+    @media (max-width: 1024px){ .gallery-grid{grid-template-columns:repeat(3, 1fr);} }
+    @media (max-width: 720px){ .gallery-grid{grid-template-columns:repeat(2, 1fr);} }
+    @media (max-width: 420px){ .gallery-grid{grid-template-columns:1fr;} }
+  </style>
 </head>
 <body>
   <header>
     <div class="topbar">
       <div class="brand">
         <a href="/" class="logo" style="display:inline-flex;align-items:center;gap:10px">
-          <img id="logo" src="/Images/Rcf-logo.png" alt="The Richard Craven Foundation" style="height:60px;object-fit:contain;display:block" />
+          <img id="logo" src="/Images/Rcf-logo.png" alt="The Richard Craven Foundation" />
           <span class="badge">501(c)(3) • EIN 87-3935599</span>
         </a>
       </div>
@@ -26,37 +49,52 @@
   </header>
 
   <main class="wrap">
-    <h1>Gallery</h1>
-    <p><a class="btn btn-primary" href="https://www.paypal.com/donate/?hosted_button_id=29SB5STNX33WC">Donate</a></p>
+    <h1 style="margin-bottom:16px">Gallery</h1>
 
-    <div class="grid" id="grid">
-      <!-- Thumbnails (click to enlarge) -->
-      <figure><a href="/Images/DadSmile.jpg" target="_blank"><img src="/Images/DadSmile.jpg" 
-      <figure><a href="/Images/DadMom2.jpg" target="_blank"><img src="/Images/DadMom2.jpg" 
-      <figure><a href="/Images/DadGmaGpa.jpg" target="_blank"><img src="/Images/DadGmaGpa.jpg" 
-      <figure><a href="/Images/DadBrothers.jpg" target="_blank"><img src="/Images/DadBrothers.jpg" 
-      <figure><a href="/Images/3Wide.jpg" target="_blank"><img src="/Images/3Wide.jpg" 
-      <figure><a href="/Images/DadUncleHank.jpg" target="_blank"><img src="/Images/DadUncleHank.jpg" 
-      <figure><a href="/Images/Family2.jpg" target="_blank"><img src="/Images/Family2.jpg" 
-      <figure><a href="/Images/Medieval.jpg" target="_blank"><img src="/Images/Medieval.jpg" 
-      <figure><a href="/Images/Richarddoingbattle.jpg" target="_blank"><img src="/Images/Richarddoingbattle.jpg" 
-      <figure><a href="/Images/Planking.jpg" target="_blank"><img src="/Images/Planking.jpg" 
-      <figure><a href="/Images/Thanks.jpg" target="_blank"><img src="/Images/Thanks.jpg" 
-      <figure><a href="/Images/20th.jpg" target="_blank"><img src="/Images/20th.jpg"
-      <figure><a href="/Images/Bren.jpg" target="_blank"><img src="/Images/Bren.jpg"
-      <figure><a href="/Images/DadGrandpa.jpg" target="_blank"><img src="/Images/DadGrandpa.jpg" 
-      <figure><a href="/Images/Winning.jpg" target="_blank"><img src="/Images/Winning.jpg" 
-      <figure><a href="/Images/DadAC.jpg" target="_blank"><img src="/Images/DadAC.jpg"
-      <figure><a href="/Images/Kickball.jpg" target="_blank"><img src="/Images/Kickball.jpg" 
-      <figure><a href="/Images/DadandMe.jpg" target="_blank"><img src="/Images/DadandMe.jpg" 
-      <figure><a href="/Images/DadFish.jpg" target="_blank"><img src="/Images/DadFish.jpg" 
-      <figure><a href="/Images/RacingFace.jpg" target="_blank"><img src="/Images/RacingFace.jpg" 
+    <div class="gallery-grid">
+      <a href="/Images/DadSmile.jpg" target="_blank" rel="noopener"><img src="/Images/DadSmile.jpg" alt=""></a>
+      <a href="/Images/DadMom2.jpg" target="_blank" rel="noopener"><img src="/Images/DadMom2.jpg" alt=""></a>
+      <a href="/Images/DadGmaGpa.jpg" target="_blank" rel="noopener"><img src="/Images/DadGmaGpa.jpg" alt=""></a>
+      <a href="/Images/DadBrothers.jpg" target="_blank" rel="noopener"><img src="/Images/DadBrothers.jpg" alt=""></a>
+
+      <a href="/Images/3Wide.jpg" target="_blank" rel="noopener"><img src="/Images/3Wide.jpg" alt=""></a>
+      <a href="/Images/DadUncleHank.jpg" target="_blank" rel="noopener"><img src="/Images/DadUncleHank.jpg" alt=""></a>
+      <a href="/Images/Family2.jpg" target="_blank" rel="noopener"><img src="/Images/Family2.jpg" alt=""></a>
+      <a href="/Images/Medieval.jpg" target="_blank" rel="noopener"><img src="/Images/Medieval.jpg" alt=""></a>
+
+      <a href="/Images/Richarddoingbattle.jpg" target="_blank" rel="noopener"><img src="/Images/Richarddoingbattle.jpg" alt=""></a>
+      <a href="/Images/Planking.jpg" target="_blank" rel="noopener"><img src="/Images/Planking.jpg" alt=""></a>
+      <a href="/Images/Thanks.jpg" target="_blank" rel="noopener"><img src="/Images/Thanks.jpg" alt=""></a>
+      <a href="/Images/20th.jpg" target="_blank" rel="noopener"><img src="/Images/20th.jpg" alt=""></a>
+
+      <a href="/Images/DadKash.jpg" target="_blank" rel="noopener"><img src="/Images/DadKash.jpg" alt=""></a>
+      <a href="/Images/Bren.jpg" target="_blank" rel="noopener"><img src="/Images/Bren.jpg" alt=""></a>
+      <a href="/Images/DadGrandpa.jpg" target="_blank" rel="noopener"><img src="/Images/DadGrandpa.jpg" alt=""></a>
+      <a href="/Images/Winning.jpg" target="_blank" rel="noopener"><img src="/Images/Winning.jpg" alt=""></a>
+
+      <a href="/Images/Char.jpg" target="_blank" rel="noopener"><img src="/Images/Char.jpg" alt=""></a>
+      <a href="/Images/DadAC.jpg" target="_blank" rel="noopener"><img src="/Images/DadAC.jpg" alt=""></a>
+      <a href="/Images/Kickball.jpg" target="_blank" rel="noopener"><img src="/Images/Kickball.jpg" alt=""></a>
+      <a href="/Images/DadandMe.jpg" target="_blank" rel="noopener"><img src="/Images/DadandMe.jpg" alt=""></a>
+
+      <a href="/Images/DadFish.jpg" target="_blank" rel="noopener"><img src="/Images/DadFish.jpg" alt=""></a>
+      <a href="/Images/RacingFace.jpg" target="_blank" rel="noopener"><img src="/Images/RacingFace.jpg" alt=""></a>
+      <a href="/Images/DadGrandsons.JPG" target="_blank" rel="noopener"><img src="/Images/DadGrandsons.JPG" alt=""></a>
+      <a href="/Images/DadGranddaughters.JPG" target="_blank" rel="noopener"><img src="/Images/DadGranddaughters.JPG" alt=""></a>
+
+      <a href="/Images/DadMom.JPG" target="_blank" rel="noopener"><img src="/Images/DadMom.JPG" alt=""></a>
+      <a href="/Images/DadMomYoung.jpg" target="_blank" rel="noopener"><img src="/Images/DadMomYoung.jpg" alt=""></a>
+      <a href="/Images/Family.jpg" target="_blank" rel="noopener"><img src="/Images/Family.jpg" alt=""></a>
+      <a href="/Images/Family3.jpg" target="_blank" rel="noopener"><img src="/Images/Family3.jpg" alt=""></a>
     </div>
 
-    <h2 style="margin-top:24px">Email Signup</h2>
-    <iframe data-w-type="embedded" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-      src="https://srhmo.mjt.lu/wgt/srhmo/0wn9/form?c=4f818c1f" width="100%" style="height: 0;"></iframe>
-    <script type="text/javascript" src="https://app.mailjet.com/pas-nc-embedded-v1.js"></script>
+    <section class="wrap" aria-labelledby="signup-heading" style="padding-left:0;padding-right:0">
+      <h2 id="signup-heading" style="margin:24px 0 12px">Email Signup</h2>
+      <iframe data-w-type="embedded" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+        src="https://srhmo.mjt.lu/wgt/srhmo/0wn9/form?c=4f818c1f" width="100%" style="height: 0;"></iframe>
+      <script type="text/javascript" src="https://app.mailjet.com/pas-nc-embedded-v1.js"></script>
+      <noscript><a class="btn btn-secondary" href="https://srhmo.mjt.lu/wgt/srhmo/0wn9/form?c=4f818c1f" target="_blank" rel="noopener">Open signup form</a></noscript>
+    </section>
   </main>
 
   <footer>
