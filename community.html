@@ -12,100 +12,118 @@
     }
     .event-section img {
       display: block;
-      margin: 0 auto 20px auto;
-      max-width: 85%;
+      margin: 0 auto 24px auto;
+      max-width: 90%;
       height: auto;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      box-shadow: 0 6px 24px rgba(0,0,0,.08), 0 2px 8px rgba(0,0,0,.06);
-    }
-    .btn {
-      display: inline-block;
-      margin: 10px 10px;
-      text-decoration: none;
-      text-align: center;
-    }
-    .btn-primary {
-      font-size: 1.25rem;
-      padding: 18px 36px;
       border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 6px 24px rgba(0,0,0,.08);
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .photo-grid img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 16px rgba(0,0,0,.08);
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="topbar">
-      <div class="brand">
-        <a href="/" class="logo" style="display:inline-flex;align-items:center;gap:10px">
-          <img id="logo" src="/Images/Rcf-logo.png" alt="The Richard Craven Foundation" style="height:60px;object-fit:contain;display:block" />
-          <span class="badge">501(c)(3) • EIN 87-3935599</span>
-        </a>
-      </div>
-      <nav>
-        <a href="/support.html">Ways to Support</a>
-        <a href="/community.html" aria-current="page">Community &amp; Events</a>
-        <a href="/story.html">Richard’s Story</a>
-        <a href="/gallery">Gallery</a>
-        <a class="btn btn-primary" href="https://www.paypal.com/donate/?hosted_button_id=29SB5STNX33WC">Donate</a>
-      </nav>
+
+<header>
+  <div class="topbar">
+    <div class="brand">
+      <a href="/" class="logo" style="display:inline-flex;align-items:center;gap:10px">
+        <img src="/Images/Rcf-logo.png" alt="The Richard Craven Foundation" style="height:60px" />
+        <span class="badge">501(c)(3) • EIN 87-3935599</span>
+      </a>
     </div>
-  </header>
+    <nav>
+      <a href="/support.html">Ways to Support</a>
+      <a href="/community.html" aria-current="page">Community &amp; Events</a>
+      <a href="/story.html">Richard’s Story</a>
+      <a href="/gallery">Gallery</a>
+      <a class="btn btn-primary" href="https://www.paypal.com/donate/?hosted_button_id=29SB5STNX33WC">Donate</a>
+    </nav>
+  </div>
+</header>
 
-  <main class="container" style="max-width:1000px">
-    <h1>Community &amp; Events</h1>
+<main class="container" style="max-width:1100px">
 
-    <h2 id="rc-memorial">The Richard Craven Memorial</h2>
-    <div class="thumbs" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:32px">
-      <img src="/Images/RCMemorial.jpeg" alt="Memorial">
-      <img src="/Images/RCMemorialAshes.jpeg" alt="Ashes">
-      <img src="/Images/RCMemorialBlackWhite.jpeg" alt="Black & White">
-      <img src="/Images/RCMemorialReids.jpeg" alt="Reid's">
+  <h1>Community &amp; Events</h1>
+
+  <!-- Memorial Section -->
+  <h2 id="rc-memorial">The Richard Craven Memorial</h2>
+  <div class="photo-grid">
+    <img src="/Images/RCMemorial.jpeg" alt="">
+    <img src="/Images/RCMemorialAshes.jpeg" alt="">
+    <img src="/Images/RCMemorialBlackWhite.jpeg" alt="">
+    <img src="/Images/RCMemorialReids.jpeg" alt="">
+  </div>
+
+  <!-- Celebration of Life -->
+  <section class="event-section">
+    <h2>Richard Craven Celebration of Life</h2>
+    <img src="/Images/Celebration of Life.jpg" alt="Richard Craven Celebration of Life Flyer">
+    <p><strong>The Country Mansion • 101 W South St, Dwight, IL 60420</strong><br>
+       March 28, 2026 • 5:00 PM</p>
+  </section>
+
+  <!-- Christmas of Hope Recap -->
+  <section class="event-section">
+    <h2>Richard’s Christmas of Hope — 2025 Recap</h2>
+    <p>Thanks to our community, we were able to bring joy, gifts, and unforgettable moments to children and families in need.</p>
+
+    <div class="photo-grid">
+      <img src="/Images/Chris.jpg" alt="">
+      <img src="/Images/Family.jpg" alt="">
+      <img src="/Images/Family2.jpg" alt="">
+      <img src="/Images/MRMRSClause.jpg" alt="">
+      <img src="/Images/OpenPresents.jpg" alt="">
+      <img src="/Images/Presents.jpg" alt="">
+      <img src="/Images/Surprise.jpg" alt="">
     </div>
+  </section>
 
-    <section id="christmas-of-hope" class="event-section">
-      <h2>Richard’s Christmas of Hope</h2>
-      <img src="/Images/ChristmasofHope.png" alt="Richard’s Christmas of Hope" />
-      <p>Special event to give back to children in need.</p>
-      <!-- This is the ONE Facebook bubble/button -->
-      <p>
-        <a class="btn btn-secondary" href="https://www.facebook.com/TheRichardCravenFoundation" target="_blank" rel="noopener">
-          See event details on Facebook
-        </a>
-      </p>
-    </section>
+  <!-- Email Signup -->
+  <h2 style="margin-top:40px">Email Signup</h2>
+  <iframe
+    data-w-type="embedded"
+    frameborder="0"
+    scrolling="no"
+    marginheight="0"
+    marginwidth="0"
+    src="https://srhmo.mjt.lu/wgt/srhmo/0wn9/form?c=4f818c1f"
+    width="100%"
+    style="height:0;">
+  </iframe>
+  <script src="https://app.mailjet.com/pas-nc-embedded-v1.js"></script>
 
-    <h2 style="margin-top:24px">Richard Craven Celebration of Life</h2>
-    <p>The Country Mansion, 101 W South St, Dwight, IL 60420 — March 28, 2026</p>
+</main>
 
-    <h2 style="margin-top:24px">Email Signup</h2>
-    <iframe
-      data-w-type="embedded"
-      frameborder="0"
-      scrolling="no"
-      marginheight="0"
-      marginwidth="0"
-      src="https://srhmo.mjt.lu/wgt/srhmo/0wn9/form?c=4f818c1f"
-      width="100%"
-      style="height:0;">
-    </iframe>
-    <script type="text/javascript" src="https://app.mailjet.com/pas-nc-embedded-v1.js"></script>
-  </main>
-
-  <footer>
-    <div class="container" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px">
-      <div>
-        <div>© The Richard Craven Foundation</div>
-        <div>1233 E Washington St, Joliet, IL 60433 • 815-412-0255</div>
-        <div>501(c)(3) • EIN 87-3935599</div>
-      </div>
-      <nav>
-        <a href="/support.html">Ways to Support</a> •
-        <a href="/community.html">Community &amp; Events</a> •
-        <a href="/story.html">Richard’s Story</a> •
-        <a href="/gallery">Gallery</a> •
-        <a href="https://www.facebook.com/TheRichardCravenFoundation" target="_blank" rel="noopener">Facebook</a>
-      </nav>
+<footer>
+  <div class="container" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px">
+    <div>
+      <div>© The Richard Craven Foundation</div>
+      <div>1233 E Washington St, Joliet, IL 60433 • 815-412-0255</div>
+      <div>501(c)(3) • EIN 87-3935599</div>
     </div>
-  </footer>
+    <nav>
+      <a href="/support.html">Ways to Support</a> •
+      <a href="/community.html">Community &amp; Events</a> •
+      <a href="/story.html">Richard’s Story</a> •
+      <a href="/gallery">Gallery</a> •
+      <a href="https://www.facebook.com/TheRichardCravenFoundation" target="_blank">Facebook</a>
+    </nav>
+  </div>
+</footer>
+
 </body>
 </html>
